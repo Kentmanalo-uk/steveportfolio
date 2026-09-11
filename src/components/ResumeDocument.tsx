@@ -10,14 +10,15 @@ interface ResumeDocumentProps {
 export const ResumeDocument: React.FC<ResumeDocumentProps> = ({ className = '' }) => {
   return (
     <div
-      className={`w-full max-w-[850px] bg-white text-slate-900 rounded-xl shadow-2xl overflow-hidden border border-slate-300 print:border-none print:shadow-none print:rounded-none print-only-resume ${className}`}
+      id="resume-document-sheet"
+      className={`w-full max-w-[850px] print:max-w-none print:w-[8.5in] bg-white text-slate-900 rounded-xl shadow-2xl overflow-hidden border border-slate-300 print:border-none print:shadow-none print:rounded-none print-only-resume ${className}`}
       style={{
         // Philippine standard Long Bond Paper ratio (8.5in x 13in ~ 1 : 1.529)
         minHeight: '1150px',
       }}
     >
       {/* Top Header Banner matching user's layout */}
-      <div className="bg-[#eef2f6] px-8 sm:px-12 py-8 border-b border-slate-200 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6">
+      <div className="bg-[#eef2f6] px-8 sm:px-12 py-8 border-b border-slate-200 flex flex-col sm:flex-row print:flex-row items-center sm:items-center print:items-center justify-between gap-6">
         
         {/* Left: Circular Photo Frame with Steven's Portrait Photo */}
         <div className="relative shrink-0">
@@ -39,10 +40,10 @@ export const ResumeDocument: React.FC<ResumeDocumentProps> = ({ className = '' }
       </div>
 
       {/* Two-Column Body */}
-      <div className="grid grid-cols-1 md:grid-cols-12 min-h-[950px]">
+      <div className="grid grid-cols-1 md:grid-cols-12 print:grid-cols-12 min-h-[950px] print:min-h-0">
         
         {/* Left Column (Dark Navy Background #162d4a) */}
-        <div className="md:col-span-5 bg-[#162d4a] text-white p-6 sm:p-8 space-y-7 text-xs">
+        <div className="md:col-span-5 print:col-span-5 bg-[#162d4a] text-white p-6 sm:p-8 space-y-7 text-xs">
           
           {/* CONTACT ME */}
           <div className="space-y-3">
@@ -148,7 +149,7 @@ export const ResumeDocument: React.FC<ResumeDocumentProps> = ({ className = '' }
         </div>
 
         {/* Right Column (Pure White Background) */}
-        <div className="md:col-span-7 bg-white text-slate-800 p-6 sm:p-9 space-y-7 text-xs text-left">
+        <div className="md:col-span-7 print:col-span-7 bg-white text-slate-800 p-6 sm:p-9 space-y-7 text-xs text-left">
           
           {/* CAREER OBJECTIVE */}
           <div className="space-y-2.5">

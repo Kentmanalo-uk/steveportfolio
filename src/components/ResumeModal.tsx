@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ResumeDocument } from './ResumeDocument';
+import { handlePrintResume } from '../utils/printResume';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -17,7 +18,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   if (!isOpen) return null;
 
   const handlePrint = () => {
-    window.print();
+    handlePrintResume();
   };
 
   return (

@@ -14,7 +14,7 @@
 @media print {
   @page {
     size: 8.5in 13in; /* Philippine Standard Long Bond Paper (Folio) */
-    margin: 0.35in;
+    margin: 0;
   }
 
   * {
@@ -22,38 +22,59 @@
     print-color-adjust: exact !important;
   }
 
+  html,
   body {
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: #ffffff !important;
     color: #0f172a !important;
+    width: 8.5in !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
-  /* Hide everything except printable resume container */
-  .no-print,
+  /* Hide everything marked as print:hidden or standard web chrome */
+  .print\:hidden,
   nav,
   header,
-  #hero-section,
-  #about-section,
-  #skills-section,
-  #capstone-section,
-  #experience-section,
-  #certifications-section,
-  #education-section,
-  #contact-section,
-  footer {
+  footer,
+  #home,
+  #about,
+  #skills,
+  #capstone,
+  #experience,
+  #certifications,
+  #education,
+  #contact,
+  #resume,
+  .no-print {
     display: none !important;
   }
 
-  .print-only-resume {
+  /* Dedicated print resume sheet only */
+  #dedicated-printable-resume {
     display: block !important;
-    position: static !important;
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 8.5in !important;
+    max-width: 8.5in !important;
+    min-height: 13in !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #ffffff !important;
     box-shadow: none !important;
     border: none !important;
-    padding: 0 !important;
+    position: static !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #dedicated-printable-resume .print-only-resume {
+    width: 8.5in !important;
+    max-width: 8.5in !important;
+    min-height: 13in !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
     margin: 0 !important;
-    color: #0f172a !important;
-    background: #ffffff !important;
   }
 }
 

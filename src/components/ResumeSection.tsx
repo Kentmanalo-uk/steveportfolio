@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ResumeDocument } from './ResumeDocument';
+import { handlePrintResume } from '../utils/printResume';
 
 interface ResumeSectionProps {
   onOpenModal?: () => void;
@@ -18,11 +19,11 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onOpenModal }) => 
   const [zoomLevel, setZoomLevel] = useState<number>(100);
 
   const handlePrint = () => {
-    window.print();
+    handlePrintResume();
   };
 
   const handleDownload = () => {
-    window.print();
+    handlePrintResume();
   };
 
   return (

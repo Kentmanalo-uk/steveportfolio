@@ -15,7 +15,7 @@ export const ProfileImage: React.FC<ProfileImageProps> = ({ size = 'md', classNa
 
   return (
     <div
-      className={`relative ${sizeClasses} rounded-full overflow-hidden border-4 border-white shadow-xl bg-slate-100 shrink-0 ${className}`}
+      className={`relative ${sizeClasses} rounded-full overflow-hidden border-4 border-white shadow-xl print:shadow-none bg-slate-100 shrink-0 ${className}`}
     >
       <img
         src={PERSONAL_INFO.photoUrl}
