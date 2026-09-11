@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ResumeDocument } from './ResumeDocument';
-import { handlePrintResume } from '../utils/printResume';
+import { handlePrintResume, downloadResumePdf, downloadResumeDocx } from '../utils/printResume';
 
 interface ResumeSectionProps {
   onOpenModal?: () => void;
@@ -22,8 +22,12 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onOpenModal }) => 
     handlePrintResume();
   };
 
-  const handleDownload = () => {
-    handlePrintResume();
+  const handleDownloadPdf = () => {
+    downloadResumePdf();
+  };
+
+  const handleDownloadDocx = () => {
+    downloadResumeDocx();
   };
 
   return (
@@ -84,6 +88,17 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onOpenModal }) => 
               </button>
             )}
 
+            {/* Download Word / WPS Document */}
+            <button
+              id="resume-section-download-docx-btn"
+              onClick={handleDownloadDocx}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors cursor-pointer"
+              title="Download editable Microsoft Word / WPS document"
+            >
+              <FileText className="w-3.5 h-3.5 text-blue-400" />
+              <span>Word (.docx)</span>
+            </button>
+
             {/* Print Button */}
             <button
               onClick={handlePrint}
@@ -93,14 +108,14 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onOpenModal }) => 
               <span>Print</span>
             </button>
 
-            {/* Download Button */}
+            {/* Download PDF Button */}
             <button
               id="resume-section-download-btn"
-              onClick={handleDownload}
+              onClick={handleDownloadPdf}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold transition-all shadow-md shadow-teal-500/20 cursor-pointer"
             >
               <FileDown className="w-4 h-4" />
-              <span>Download Résumé (PDF)</span>
+              <span>Download PDF</span>
             </button>
           </div>
         </div>

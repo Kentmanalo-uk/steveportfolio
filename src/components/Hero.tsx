@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ProfileImage } from './ProfileImage';
-import { handlePrintResume } from '../utils/printResume';
+import { downloadResumePdf } from '../utils/printResume';
 
 interface HeroProps {
   onOpenResumeModal: () => void;
@@ -88,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
 
               <button
                 id="hero-download-resume-btn"
-                onClick={handlePrintResume}
+                onClick={downloadResumePdf}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-600 font-semibold text-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer shadow-sm"
               >
                 <FileDown className="w-4 h-4 text-teal-400" />
