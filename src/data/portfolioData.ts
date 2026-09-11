@@ -20,7 +20,7 @@ export const PERSONAL_INFO = {
   address: 'Barangay Pulosahi, Bongabong, Oriental Mindoro 5211',
   email: 'stevennarf17@gmail.com',
   mobile: '09936924735',
-  photoUrl: '/steven-fran-photo.jpg',
+  photoUrl: 'https://plain-apac-prod-public.komododecks.com/202609/11/1pYu8FfQQTgsnmwQ5vdK/image.jpg',
   github: 'https://github.com/stevenfran',
   githubUser: 'stevenfran',
   linkedin: 'https://linkedin.com/in/steven-fran',
@@ -29,7 +29,7 @@ export const PERSONAL_INFO = {
   resumeFileName: 'Fran Steven.pdf',
   status: 'Ready for Internship / OJT & Junior Roles',
   bioParagraph1:
-    'Welcome! I am Steven P. Fran, a 4th-year Bachelor of Science in Information Technology student (2023–2027) at Innovative College of Science & Information Technology, based in Oriental Mindoro. I focus on system development, database management, and programming, with a strong commitment to writing clean, reliable code and crafting user-oriented database architectures.',
+    'Welcome! I am Steven P. Fran, a 4th-year Bachelor of Science in Information Technology student (2023–2027) at Innovative College of Science & Information Technology, province of Oriental Mindoro. I focus on system development, database management, and programming, with a strong commitment to writing clean, reliable code and crafting user-oriented database architectures.',
   bioParagraph2:
     'I love turning real-world manual processes into efficient digital tools that help people and communities. As a fast learner and hardworking developer, I bridge the gap between user requirements and functional systems, recently demonstrated through the successful development and defense of our computerized Barangay Management System. I am enthusiastic about learning modern industry workflows and contributing effectively to a forward-thinking IT team.',
 };

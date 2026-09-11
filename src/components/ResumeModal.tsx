@@ -7,7 +7,6 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ResumeDocument } from './ResumeDocument';
-import { PhotoUploader } from './PhotoUploader';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -37,7 +36,6 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           </div>
 
           <div className="flex items-center gap-2">
-            <PhotoUploader variant="button" />
             <button
               onClick={handlePrint}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold transition-all shadow-sm cursor-pointer"

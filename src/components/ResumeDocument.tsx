@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { PERSONAL_INFO, CERTIFICATIONS } from '../data/portfolioData';
-import { PhotoUploader } from './PhotoUploader';
+import { ProfileImage } from './ProfileImage';
 
 interface ResumeDocumentProps {
   className?: string;
@@ -21,7 +21,7 @@ export const ResumeDocument: React.FC<ResumeDocumentProps> = ({ className = '' }
         
         {/* Left: Circular Photo Frame with Steven's Portrait Photo */}
         <div className="relative shrink-0">
-          <PhotoUploader size="lg" />
+          <ProfileImage size="lg" />
         </div>
 
         {/* Right: Name in bold navy uppercase */}

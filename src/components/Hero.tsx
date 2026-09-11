@@ -8,18 +8,15 @@ import {
   Sparkles,
   CheckCircle2,
   ArrowRight,
-  Camera,
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { PhotoUploader } from './PhotoUploader';
-import { useProfilePhoto } from '../context/PhotoContext';
+import { ProfileImage } from './ProfileImage';
 
 interface HeroProps {
   onOpenResumeModal: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
-  const { photoUrl } = useProfilePhoto();
   return (
     <section
       id="home"
@@ -61,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
 
             {/* Tagline & Intro matching prompt instructions */}
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
-              I am an aspiring IT professional from <span className="text-slate-200 font-medium">{PERSONAL_INFO.school}</span> in <span className="text-slate-200 font-medium">{PERSONAL_INFO.location}</span>. Passionate about building simple, useful systems and eager to start my career in IT. Ready to contribute in software development, database design, and technical support.
+              I am an aspiring IT student from <span className="text-slate-200 font-medium">{PERSONAL_INFO.school}</span> in <span className="text-slate-200 font-medium">{PERSONAL_INFO.location}</span>. Passionate about building simple, useful systems and eager to start my career in IT. Ready to contribute in software development, database design, and technical support.
             </p>
 
             {/* Quick Meta Badges */}
@@ -136,7 +133,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
                 
                 {/* Header with Avatar & Badge */}
                 <div className="flex items-center gap-4">
-                  <PhotoUploader size="sm" />
+                  <ProfileImage size="sm" />
 
                   <div>
                     <h3 className="text-lg font-bold text-white leading-snug">Steven P. Fran</h3>

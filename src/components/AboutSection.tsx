@@ -26,7 +26,7 @@ export const AboutSection: React.FC = () => {
             About Me
           </h2>
           <p className="text-slate-400 text-sm sm:text-base">
-            Get to know my background, academic journey, and what drives me as an aspiring IT professional.
+            Get to know my background, academic journey, and what drives me as an aspiring IT student.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export const AboutSection: React.FC = () => {
               
               <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
                 <p>
-                  I am a <strong className="text-white font-semibold">4th-year Bachelor of Science in Information Technology (BSIT) student (2023–2027)</strong> at <span className="text-teal-300">Innovative College of Science & Information Technology</span>, based in <strong className="text-white font-semibold">Oriental Mindoro, Philippines</strong>. My core technical focus centers on <strong className="text-teal-300 font-semibold">system development</strong>, <strong className="text-emerald-300 font-semibold">database management</strong>, and <strong className="text-cyan-300 font-semibold">structured programming</strong>.
+                  I am a <strong className="text-white font-semibold">4th-year Bachelor of Science in Information Technology (BSIT) student (2023–2027)</strong> at <span className="text-teal-300">Innovative College of Science & Information Technology</span>, province of <strong className="text-white font-semibold">Oriental Mindoro, Philippines</strong>. My core technical focus centers on <strong className="text-teal-300 font-semibold">system development</strong>, <strong className="text-emerald-300 font-semibold">database management</strong>, and <strong className="text-cyan-300 font-semibold">structured programming</strong>.
                 </p>
                 <p>
                   I love turning real-world ideas and community challenges into working digital tools that help people. Throughout my academic tenure, I have maintained consistent performance from 1st to 3rd year and recently spearheaded the database design, core programming, and user interface for our capstone: the <strong className="text-white">Barangay Management System</strong>. This project replaced manual paper logbooks with automated, searchable records and rapid certificate issuance.

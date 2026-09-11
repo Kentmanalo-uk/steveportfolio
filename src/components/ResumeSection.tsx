@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ResumeDocument } from './ResumeDocument';
-import { PhotoUploader } from './PhotoUploader';
 
 interface ResumeSectionProps {
   onOpenModal?: () => void;
@@ -53,9 +52,6 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onOpenModal }) => 
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5">
-            {/* Upload Photo Button */}
-            <PhotoUploader variant="button" />
-
             {/* Zoom Controls */}
             <div className="hidden md:flex items-center bg-slate-950 rounded-lg border border-slate-800 px-1 py-0.5">
               <button

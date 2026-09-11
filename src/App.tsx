@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { PhotoProvider } from './context/PhotoContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
@@ -17,51 +16,49 @@ export default function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <PhotoProvider>
-      <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-teal-500 selection:text-slate-950 font-sans">
-        {/* Navigation Header */}
-        <Navbar onOpenResumeModal={() => setIsResumeModalOpen(true)} />
+    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-teal-500 selection:text-slate-950 font-sans">
+      {/* Navigation Header */}
+      <Navbar onOpenResumeModal={() => setIsResumeModalOpen(true)} />
 
-        {/* Main Content Sections */}
-        <main>
-          {/* 1. HOME / LANDING */}
-          <Hero onOpenResumeModal={() => setIsResumeModalOpen(true)} />
+      {/* Main Content Sections */}
+      <main>
+        {/* 1. HOME / LANDING */}
+        <Hero onOpenResumeModal={() => setIsResumeModalOpen(true)} />
 
-          {/* 2. ABOUT ME */}
-          <AboutSection />
+        {/* 2. ABOUT ME */}
+        <AboutSection />
 
-          {/* 3. SKILLS */}
-          <SkillsSection />
+        {/* 3. SKILLS */}
+        <SkillsSection />
 
-          {/* 4. CAPSTONE PROJECT (BARANGAY MANAGEMENT SYSTEM) */}
-          <CapstoneProject />
+        {/* 4. CAPSTONE PROJECT (BARANGAY MANAGEMENT SYSTEM) */}
+        <CapstoneProject />
 
-          {/* 5. INTERNSHIP / OJT / PRACTICUM */}
-          <ExperienceOjtSection />
+        {/* 5. INTERNSHIP / OJT / PRACTICUM */}
+        <ExperienceOjtSection />
 
-          {/* 6 & 7 & 8. CERTIFICATIONS, ACHIEVEMENTS & ORGANIZATIONS */}
-          <CertificationsAchievementsSection />
+        {/* 6 & 7 & 8. CERTIFICATIONS, ACHIEVEMENTS & ORGANIZATIONS */}
+        <CertificationsAchievementsSection />
 
-          {/* 9. EDUCATION */}
-          <EducationSection />
+        {/* 9. EDUCATION */}
+        <EducationSection />
 
-          {/* 10. RESUME (LONG BOND PAPER FORMAT) */}
-          <ResumeSection onOpenModal={() => setIsResumeModalOpen(true)} />
+        {/* 10. RESUME (LONG BOND PAPER FORMAT) */}
+        <ResumeSection onOpenModal={() => setIsResumeModalOpen(true)} />
 
-          {/* 11. CONTACT ME */}
-          <ContactSection />
-        </main>
+        {/* 11. CONTACT ME */}
+        <ContactSection />
+      </main>
 
-        {/* Footer */}
-        <Footer />
+      {/* Footer */}
+      <Footer />
 
-        {/* Interactive Resume View & Download Modal */}
-        <ResumeModal
-          isOpen={isResumeModalOpen}
-          onClose={() => setIsResumeModalOpen(false)}
-        />
-      </div>
-    </PhotoProvider>
+      {/* Interactive Resume View & Download Modal */}
+      <ResumeModal
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+      />
+    </div>
   );
 }
 
